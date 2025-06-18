@@ -1,8 +1,9 @@
 # Cloud Atlas - Singapore
 
 ## Overview
-
 Cloud Atlas is a responsive Singapore weather station monitoring application built with Angular.
+
+![clip](https://github.com/user-attachments/assets/2cd428ef-18d2-4e67-8b0e-6e0ca0c560fa)
 
 ## ⭐ Features
 
@@ -11,6 +12,8 @@ Cloud Atlas is a responsive Singapore weather station monitoring application bui
 - Mobile-responsive design
 - Dynamic data updates
 - Cross-platform support
+- Multiple Map Styles Available
+- Error Handling
 
 ## 🛠️ Tech Stack
 
