@@ -1,27 +1,78 @@
-# CloudatlasSg
+# Cloud Atlas - Singapore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
+## Overview
 
-## Development server
+Cloud Atlas is a responsive Singapore weather station monitoring application built with Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ⭐ Features
 
-## Code scaffolding
+- Interactive weather station mapping of Singapore
+- Weather dashboard for each location
+- Mobile-responsive design
+- Dynamic data updates
+- Cross-platform support
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tech Stack
 
-## Build
+- Angular 18.2.0
+- TypeScript 5.5.2
+- Leaflet 1.9.4
+- Chart.js 4.5.0
+- RxJS 7.8.0
+- SCSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Getting Started
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# Clone repository
+git clone https://github.com/lloyd-axe/cloudatlas.git
 
-## Running end-to-end tests
+# Install dependencies
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Start development server
+npm start
+```
 
-## Further help
+### Mobile Setup
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Physical Device Testing
+
+1. Connect device to same network as development machine
+2. Find development machine's IP:
+
+```bash
+ipconfig
+```
+
+3. Start with host parameter:
+
+```bash
+ng serve --host 0.0.0.0
+```
+
+4. Access on mobile: `http://[your-ip-address]:4200`
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+npm test
+```
+
+## 📁 Project Structure
+
+```
+cloudatlas-sg/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── models/
+│   │   ├── pipes/
+│   │   ├── home/
+└── └── └── app.component.*
+
+```
