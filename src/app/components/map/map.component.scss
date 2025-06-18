@@ -1,0 +1,32 @@
+.map-container {
+  position: absolute;
+  inset: 0;
+}
+
+.map-frame {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.map-header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+  padding: 6px 8px;
+  border-radius: 25px;
+}

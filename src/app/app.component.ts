@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ErrorToastComponent } from './components/error-toast/error-toast.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HomeComponent, ErrorToastComponent],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
+    <app-home/>
+    <app-error-toast/>
   `,
   styles: [],
 })

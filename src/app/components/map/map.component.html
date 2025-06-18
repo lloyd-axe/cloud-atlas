@@ -1,0 +1,15 @@
+<div class="map-container">
+  <div class="map-frame">
+    <div class="map-header">
+      <div class="toolbar glass-1">
+        <app-layer-settings-button [map]="mapInstance"></app-layer-settings-button>
+        <app-search-bar
+          [locationData]="locations()"
+          (selectedLocation)="onLocationSelected($event)"
+        />
+      </div>
+    </div>
+    <div id="map"></div>
+    <app-modal *ngIf="modalState.isOpen()"></app-modal>
+  </div>
+</div>

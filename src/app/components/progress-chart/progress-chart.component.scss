@@ -1,0 +1,43 @@
+.progress-circle {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  svg {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    display: block;
+  }
+
+  .background {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 10;
+  }
+
+  .progress {
+    fill: none;
+    stroke: rgb(40, 175, 201);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s;
+  }
+
+  text {
+    fill: #e0f0ff;
+    font-size: 22px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .progress-circle{
+    height: 4rem;
+  }
+}

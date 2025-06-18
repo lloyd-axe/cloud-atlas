@@ -1,0 +1,6 @@
+    <div *ngIf="showToast" 
+         class="toast-container"
+         [class.error]="currentError?.type === 'error'"
+         [class.warning]="currentError?.type === 'warning'">
+      {{ currentError?.message }}
+    </div>

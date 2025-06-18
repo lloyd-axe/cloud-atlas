@@ -1,0 +1,93 @@
+<div *ngIf="modalState.isOpen()" class="modal-backdrop">
+  <div class="modal-container glass-1">
+    <div class="modal-header">
+      <div class="modal-header-title">
+        <span>Weather Dashboard</span> : 
+        <span class="current-date">{{ today | date: 'mediumDate' }}</span>
+      </div>
+      
+      <button class="close-btn glass-3" (click)="close()">×</button>
+    </div>
+    <div class="modal-content">
+      <div class="grid-item glass-2 container-1">
+        <div *ngIf="!weatherData()">
+          <app-spinner message=""></app-spinner>
+        </div>
+        <div *ngIf="weatherData()" class="grid-content">
+          <span class="grid-item-text location-name scrolling-text" [attr.title]="modalState.locationName()">
+            <span>{{ modalState.locationName() }}</span>
+          </span>
+          <span class="current-temperature">
+            {{ currentTemperature }}<span class="temperature-unit">°C</span>
+          </span>
+          <span class="grid-item-text weather-state">{{ modalState.currentWeather() }}</span>
+          <span>
+            <span class="temp-range">
+              H:{{ todaySummary?.maxTemp }}°C   L:{{ todaySummary?.minTemp }}°C
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-item glass-2 container-2">
+        <div *ngIf="weatherData()" class="grid-content">
+          <span class="grid-item-text grid-item-title">Humidity</span>
+          <app-progress-chart [percentage]="currentHumidity ?? 0"></app-progress-chart>
+          <span class="grid-item-text heat-index">Heat Index: {{ currentHeatIndex | number: '1.0-1' }}°C</span>
+        </div>
+        <div *ngIf="!weatherData()">
+          <app-spinner message=""></app-spinner>
+        </div>
+      </div>
+
+      <div class="grid-item glass-2 container-3">
+        <app-mini-map
+          [latitude]="modalState.latitude()!"
+          [longitude]="modalState.longitude()!">
+        </app-mini-map>
+      </div>
+
+      <div class="grid-spacer">
+        <div class="button-group">
+          <div class="range-label"><b>Date Range:</b></div>
+          <button 
+            [class.active]="selectedRange() === 3"
+            (click)="updateRange(3)">3D</button>
+          <button 
+            [class.active]="selectedRange() === 5"
+            (click)="updateRange(5)">5D</button>
+          <button 
+            [class.active]="selectedRange() === 7"
+            (click)="updateRange(7)">7D</button>
+          <button 
+            [class.active]="selectedRange() === 30"
+            (click)="updateRange(30)">1M</button>
+        </div>
+      </div>
+
+      <div class="grid-item glass-2 container-4 chart-item">
+        <span *ngIf="weatherData()" class="grid-item-text">Relative Humidity Trend Chart</span>
+        <div class="chart-wrapper">
+          <canvas id="humidityChart"></canvas>
+        </div>
+        <span *ngIf="weatherData()" class="grid-item-text">Direct Radiation Trend Chart</span>
+        <div class="chart-wrapper">
+          <canvas id="radiationChart"></canvas>
+        </div>
+        <div *ngIf="!weatherData()">
+          <app-spinner message=""></app-spinner>
+        </div>
+      </div>
+
+      <div class="grid-item glass-2 container-5 chart-item">
+        <span *ngIf="weatherData()" class="grid-item-text chart-title">Temperature Trend Chart</span>
+        <div class="chart-wrapper">
+          <canvas id="temperatureChart"></canvas>
+        </div>
+        <div *ngIf="!weatherData()">
+          <app-spinner message=""></app-spinner>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
