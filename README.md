@@ -30,7 +30,7 @@ Cloud Atlas is a responsive Singapore weather station monitoring application bui
 
 ```bash
 # Clone repository
-git clone https://github.com/lloyd-axe/cloudatlas.git
+git clone https://github.com/lloyd-axe/cloud-atlas.git
 
 # Install dependencies
 npm install
