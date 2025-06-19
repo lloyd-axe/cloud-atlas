@@ -14,6 +14,7 @@ Cloud Atlas is a responsive Singapore weather station monitoring application bui
 - Cross-platform support
 - Multiple Map Styles Available
 - Error Handling
+- Unit Tests
 
 ## 🛠️ Tech Stack
 
